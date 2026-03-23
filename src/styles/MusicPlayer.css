@@ -1,0 +1,148 @@
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 30px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.player-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.song-icon {
+  font-size: 2em;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.song-details h3 {
+  font-size: 1em;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.song-details p {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+.player-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.2s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.play-btn {
+  background: white;
+  color: #667eea;
+  width: 40px;
+  height: 40px;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+  background: white;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.time {
+  font-size: 0.8em;
+  min-width: 40px;
+  font-family: monospace;
+}
+
+.song-details .song-artist{
+  color: white;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .music-player {
+    padding: 10px;
+  }
+  
+  .player-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .song-info {
+    width: 100%;
+  }
+  
+  .player-controls {
+    width: 100%;
+  }
+  
+  .volume-control {
+    width: 100%;
+  }
+}

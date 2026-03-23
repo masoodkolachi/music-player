@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 2.5em;
+  /* margin-bottom: 10px; */
+}
+
+.app-header p {
+  opacity: 0.9;
+}
+
+.playlist-actions button{
+  padding: 10px 15px;
+  background-color: rgb(16, 170, 88);
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 17px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+/* .clear-playlist-btn:hover{
+  background-color: red;
+} */
+
+.playlist-actions button:hover{
+  background-color: grey;
+}
+
+.playlist-actions label{
+  padding: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  background-color: rgb(16, 170, 88);
+  border-radius: 10px;
+
+}
+
+.playlist-actions label:hover{
+  background-color: grey;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 600px;
+}
+
+.sidebar {
+  background: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  padding: 20px;
+}
+
+.content {
+  padding: 20px;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+}

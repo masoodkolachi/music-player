@@ -1,0 +1,68 @@
+.playlist {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.playlist-header h2 {
+  color: #333;
+  font-size: 1.5em;
+}
+
+.song-count {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.playlist{
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.playlist-items {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.playlist-grid{
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.playlist-footer{
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+
+}
+
+.playlist-info{
+  display: flex;
+  /* flex-direction: column; */
+  gap: 5px 10px;
+}
+
+/* .draggable{
+  margin: 10px 0;
+} */
+
+.empty-playlist {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.empty-playlist p:first-child {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
